@@ -10,6 +10,8 @@
 #include <qfiledialog.h>
 #include <qfileinfo.h>
 #include <QListWidget>
+#include <QFile>
+#include <qmessagebox.h>
 
 class Widget15_1 : public QMainWindow
 {

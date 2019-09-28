@@ -1,0 +1,39 @@
+/*this->setStyleSheet("Widget15_1{background-image:url(:icon/image/5.jpg)}");
+	qApp->setStyleSheet(
+		"QPushButton {border: 2px solid #8f8f91;"
+		" border-radius: 6px; "
+		"background-color:rgb(201, 184, 255) ;"
+		"font: 12pt \"楷体\";color:rgb(226, 239, 255);}"
+	);
+
+background-image:url(:/icon/image/5.jpg);
+background-attachment:fixed;
+font: 12pt "楷体";
+color:rgb(253, 255, 224)
+*/
+QMainWindow{
+    background-image:url(:icon/image/5.jpg);
+    background-attachment:fixed;
+    border-width : 2px;
+    border-color : black;
+    border-radius: 5px;
+
+}
+QPushButton{
+    
+    border:2px solid #8f8f91;
+    border-radius:4px;
+    background-color:rgb(201, 184, 255);
+    font-size:12pt;
+    font-family:"楷体";
+    color:rgb(253, 255, 224);
+}
+QListWidget{
+    background-image:url(:icon/image/5.jpg);
+    background-attachment:fixed;
+    border:1px solid black;
+    border-radius:4px;
+    alternate-background-color:darkgray;
+    color:lightgray;
+    opacity:150;
+}

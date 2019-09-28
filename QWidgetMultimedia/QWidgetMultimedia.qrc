@@ -15,4 +15,7 @@
         <file>image/9.jpg</file>
         <file>image/listWidget.jpg</file>
     </qresource>
+    <qresource prefix="/qss">
+        <file>theme.qss</file>
+    </qresource>
 </RCC>

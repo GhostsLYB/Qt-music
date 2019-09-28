@@ -114,14 +114,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="QWidgetMultimedia.cpp" />
     <ClCompile Include="Widget15_1.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="QWidgetMultimedia.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <QtUic Include="QWidgetMultimedia.ui" />
     <QtUic Include="Widget15_1.ui" />
   </ItemGroup>
   <ItemGroup>

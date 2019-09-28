@@ -8,9 +8,16 @@ Widget15_1::Widget15_1(QWidget *parent)
 	this->setWindowTitle("音乐播放器");
 	this->resize(500,350);
 	this->setCentralWidget(ui.groupBox);
+	//加载主题风格
+	QFile f(":/qss/theme.qss");
+	if (f.open(QFile::ReadOnly))
+		qApp->setStyleSheet(f.readAll());
+	else
+		QMessageBox::warning(this, "waring", "Theme file theme.qss open fail!");
 	//this->setWindowFlag(Qt::SplashScreen, true);
 
 	//风格设置
+	/*
 	this->setStyleSheet("Widget15_1{background-image:url(:icon/image/5.jpg)}");
 	qApp->setStyleSheet(
 		"QPushButton {border: 2px solid #8f8f91;"
@@ -18,6 +25,7 @@ Widget15_1::Widget15_1(QWidget *parent)
 		"background-color:rgb(201, 184, 255) ;"
 		"font: 12pt \"楷体\";color:rgb(226, 239, 255);}"
 	);
+	*/
 	slider = new QSlider(this);
 	slider->setOrientation(Qt::Horizontal);
 	slider->setFixedWidth(200);

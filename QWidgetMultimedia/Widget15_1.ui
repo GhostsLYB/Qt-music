@@ -48,11 +48,6 @@
          </item>
          <item>
           <widget class="QPushButton" name="pushButton">
-           <property name="styleSheet">
-            <string notr="true">font: 12pt &quot;楷体&quot;;
-color:rgb(226, 239, 255);
-</string>
-           </property>
            <property name="text">
             <string>添加</string>
            </property>
@@ -88,14 +83,7 @@ color:rgb(226, 239, 255);
         </layout>
        </item>
        <item>
-        <widget class="QListWidget" name="listWidget">
-         <property name="styleSheet">
-          <string notr="true">background-image:url(:/icon/image/5.jpg);
-background-attachment:fixed;
-font: 12pt &quot;楷体&quot;;
-color:rgb(253, 255, 224)</string>
-         </property>
-        </widget>
+        <widget class="QListWidget" name="listWidget"/>
        </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_3">

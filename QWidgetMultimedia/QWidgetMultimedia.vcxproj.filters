@@ -33,25 +33,16 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="QWidgetMultimedia.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Widget15_1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="QWidgetMultimedia.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
     <QtMoc Include="Widget15_1.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="QWidgetMultimedia.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
     <QtUic Include="Widget15_1.ui">
       <Filter>Form Files</Filter>
     </QtUic>
