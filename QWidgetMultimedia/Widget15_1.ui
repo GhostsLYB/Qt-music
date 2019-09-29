@@ -48,6 +48,12 @@
          </item>
          <item>
           <widget class="QPushButton" name="pushButton">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
            <property name="text">
             <string>添加</string>
            </property>
@@ -83,17 +89,34 @@
         </layout>
        </item>
        <item>
-        <widget class="QListWidget" name="listWidget"/>
+        <widget class="QListWidget" name="listWidget">
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_3">
          <item>
           <layout class="QHBoxLayout" name="horizontalLayout">
            <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
             <widget class="QPushButton" name="pushButton_5">
              <property name="maximumSize">
               <size>
-               <width>25</width>
+               <width>16777215</width>
                <height>16777215</height>
               </size>
              </property>
@@ -103,13 +126,26 @@
             </widget>
            </item>
            <item>
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
             <widget class="QPushButton" name="pushButton_6">
              <property name="enabled">
               <bool>true</bool>
              </property>
              <property name="maximumSize">
               <size>
-               <width>25</width>
+               <width>10000</width>
                <height>16777215</height>
               </size>
              </property>
@@ -119,10 +155,23 @@
             </widget>
            </item>
            <item>
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
             <widget class="QPushButton" name="pushButton_7">
              <property name="maximumSize">
               <size>
-               <width>25</width>
+               <width>1000</width>
                <height>16777215</height>
               </size>
              </property>
@@ -132,13 +181,26 @@
             </widget>
            </item>
            <item>
+            <spacer name="horizontalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
             <widget class="QPushButton" name="pushButton_4">
              <property name="enabled">
               <bool>true</bool>
              </property>
              <property name="maximumSize">
               <size>
-               <width>25</width>
+               <width>100000</width>
                <height>16777215</height>
               </size>
              </property>
@@ -148,10 +210,23 @@
             </widget>
            </item>
            <item>
+            <spacer name="horizontalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
             <widget class="QPushButton" name="pushButton_8">
              <property name="maximumSize">
               <size>
-               <width>25</width>
+               <width>10000</width>
                <height>16777215</height>
               </size>
              </property>
@@ -160,20 +235,46 @@
              </property>
             </widget>
            </item>
+           <item>
+            <spacer name="horizontalSpacer_8">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_7">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
           </layout>
          </item>
          <item>
           <widget class="QLabel" name="label">
            <property name="minimumSize">
             <size>
-             <width>25</width>
-             <height>25</height>
+             <width>20</width>
+             <height>20</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
-             <width>25</width>
-             <height>25</height>
+             <width>20</width>
+             <height>20</height>
             </size>
            </property>
            <property name="text">
@@ -186,6 +287,12 @@
          </item>
          <item>
           <widget class="QSlider" name="horizontalSlider">
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>0</height>
+            </size>
+           </property>
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>

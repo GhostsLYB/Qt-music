@@ -16,6 +16,8 @@
 class Widget15_1 : public QMainWindow
 {
 	Q_OBJECT
+private:
+	void setBtnProperty();
 
 public:
 
