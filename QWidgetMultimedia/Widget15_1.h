@@ -12,6 +12,8 @@
 #include <QListWidget>
 #include <QFile>
 #include <qmessagebox.h>
+#include <qpushbutton.h>
+#include "MyWidget.h"
 
 class Widget15_1 : public QMainWindow
 {
@@ -21,7 +23,7 @@ private:
 
 public:
 
-	bool sliderDown = false;
+	bool sliderDown = false;//slider Û±Í∞¥œ¬
 	Widget15_1(QWidget *parent = Q_NULLPTR);
 	~Widget15_1();
 	void on_pushButon_clicked();

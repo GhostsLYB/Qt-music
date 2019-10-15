@@ -9,6 +9,37 @@ Widget15_1::Widget15_1(QWidget *parent)
 	this->setFixedSize(500,350);
 	this->setCentralWidget(ui.groupBox);
 	setBtnProperty();
+	
+	//浮动窗口
+	MyWidget * floatWidget = new MyWidget();
+	connect(floatWidget, &MyWidget::btn1Clicked, [=]() {this->show(); floatWidget->hide(); });
+	connect(floatWidget, &MyWidget::btn2Clicked, this, &Widget15_1::on_pushButon_7_clicked);
+	connect(floatWidget, &MyWidget::btn3Clicked, this, &Widget15_1::on_pushButon_6_clicked);
+	connect(floatWidget, &MyWidget::btn4Clicked, this, &Widget15_1::on_pushButon_8_clicked);
+	connect(floatWidget, &MyWidget::btn5Clicked, [=]() {
+		if (player->state() == QMediaPlayer::PlayingState)
+		{
+			this->on_pushButon_4_clicked(); 
+			return;
+		}
+		if (player->state() == QMediaPlayer::PausedState)
+		{
+			this->on_pushButon_5_clicked();
+			return;
+		}
+		if (player->state() == QMediaPlayer::StoppedState)
+		{
+			this->on_pushButon_5_clicked();
+			return;
+		}
+		});
+	//透明度
+	connect(ui.sliderOpacity, &QSlider::valueChanged, [=](int value) {
+		qreal opacity = value;
+		this->setWindowOpacity(opacity / 100);
+		QRect rect = this->rect();
+		
+		});
 	//加载主题风格
 	QFile f(":/qss/theme.qss");
 	if (f.open(QFile::ReadOnly))
@@ -26,10 +57,12 @@ Widget15_1::Widget15_1(QWidget *parent)
 	ui.statusBar->addWidget(labName);
 	ui.statusBar->addWidget(slider);
 	ui.statusBar->addWidget(labTime);
+	//初始化
 	player = new QMediaPlayer(this);
 	playList = new QMediaPlaylist(this);
 	player->setPlaylist(playList);
 	playList->setPlaybackMode(QMediaPlaylist::Loop);
+
 	//player->setMuted(true); //静音
 	//音量
 	ui.horizontalSlider->setMaximum(100);
@@ -60,7 +93,8 @@ Widget15_1::Widget15_1(QWidget *parent)
 	connect(slider, &QSlider::sliderReleased, [=]() {sliderDown = false; });
 	//退出
 	connect(ui.btnQuit, &QPushButton::clicked, [=]() {
-		close(); 
+		this->hide();
+		floatWidget->show();
 		});
 }
 
@@ -128,8 +162,12 @@ void Widget15_1::onCurrentItemChanged(const QListWidgetItem * item)
 	labName->setText(musicName);
 	if (row == 0)
 		ui.pushButton_7->setEnabled(false);
+	else
+		ui.pushButton_7->setEnabled(true);
 	if (row == ui.listWidget->count() - 1)
 		ui.pushButton_8->setEnabled(false);
+	else
+		ui.pushButton_8->setEnabled(true);
 	playList->setCurrentIndex(row);
 	player->play();
 }
@@ -147,12 +185,10 @@ void Widget15_1::on_pushButon_6_clicked()
 }
 void Widget15_1::on_pushButon_7_clicked()
 {
-	ui.listWidget->setCurrentRow(ui.listWidget->currentRow() - 1);
 	playList->previous();
 }
 void Widget15_1::on_pushButon_8_clicked()
 {
-	ui.listWidget->setCurrentRow(ui.listWidget->currentRow() + 1);
 	playList->next();
 }
 void Widget15_1::onStateChanged(QMediaPlayer::State state)
@@ -188,6 +224,12 @@ void Widget15_1::onDurationChanged(qint64 duration)
 void Widget15_1::onVolumeChanged(int value)
 {
 	ui.horizontalSlider->setValue(value);
+	QPixmap pix;
+	if (value == 0)
+		pix.load(":/icon/image/volume-down.jpg");
+	else
+		pix.load(":/icon/image/volume.jpg");
+	ui.label->setPixmap(pix);
 }
 void Widget15_1::sliderValueChanged(int value)
 {

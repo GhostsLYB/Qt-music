@@ -3,6 +3,7 @@
         <file>image/5.jpg</file>
         <file>image/volume.jpg</file>
         <file>image/volume-down.jpg</file>
+        <file>image/music.jpg</file>
     </qresource>
     <qresource prefix="/qss">
         <file>theme.qss</file>

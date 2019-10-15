@@ -36,9 +36,21 @@
     <ClCompile Include="Widget15_1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MyWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="Widget15_1.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MyWidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MyButton.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
